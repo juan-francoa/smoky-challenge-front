@@ -10,6 +10,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding-left: 1em;
+    background-color: #141414;
 }
 
 .navbar a {
@@ -19,11 +20,12 @@ nav {
     font-weight: bolder;
 }
 
-.nav-div-container{
+.nav-div-container {
     text-shadow: #58CDFF 0px 0px 5px, #58CDFF 0px 0px 10px, #58CDFF 0px 0px 15px, #58CDFF 0px 0px 20px, #58CDFF 0px 0px 30px, #58CDFF 0px 0px 40px, #58CDFF 0px 0px 50px, #58CDFF 0px 0px 75px, 2px 2px 2px #58CDFFf5;
 }
-.nav-div-container a:hover{
-    text-shadow:  #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(255, 255, 255, 0.959);
+
+.nav-div-container a:hover {
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(255, 255, 255, 0.959);
 }
 
 .logo-header {
@@ -37,7 +39,7 @@ nav {
 
 .cart-logo {
     width: 2.7em;
-    position:fixed;
+    position: fixed;
 }
 
 .user-logo-container {
@@ -184,7 +186,8 @@ nav {
     margin-top: 3em;
 }
 
-.footer-container h3, h5 {
+.footer-container h3,
+h5 {
     color: #FF2D95;
     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(255, 255, 255, 0.959);
 }
@@ -197,7 +200,7 @@ nav {
     width: 12em;
 }
 
-.logo-footer-container{
+.logo-footer-container {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -222,7 +225,7 @@ nav {
     color: #ffffff;
 }
 
-.map-text h3{
+.map-text h3 {
     margin-bottom: 1em;
 }
 
@@ -230,7 +233,7 @@ nav {
     line-height: 1em;
 }
 
-.footer-warning{
+.footer-warning {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,10 +241,133 @@ nav {
     background-color: #222222;
 }
 
-.header-container h1{
+.header-container h1 {
     display: flex;
     justify-content: center;
 }
 
 
 /* CARDS STYLES */
+
+
+
+
+
+
+
+
+/* SIGN IN STYLES */
+.card {
+    width: 30%;
+    height: auto;
+    background-image: linear-gradient(163deg, #FF26A9 0%, #58CDFF 100%);
+    border-radius: 20px;
+    transition: all .3s;
+    margin-top: 2em;
+
+}
+
+.card2 {
+    width: 100%;
+    height: auto;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    transition: all .2s;
+}
+
+.card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px #58CDFF;
+}
+
+.card3 {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card3 h3{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px #FF2D95;
+}
+
+/*Inputs*/
+.field {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    background-color: #1c1c20;
+    border-radius: 4px;
+    padding: .5em 1em;
+}
+
+.input-icon {
+    height: 1em;
+    width: 1em;
+    fill: #FF26A9;
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #ffffff;
+}
+
+/*Text*/
+.title {
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+
+/*Buttons*/
+.btn {
+    margin: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: .8em;
+    text-transform: uppercase;
+    padding: 0.6em 1.2em;
+    background-color: #ff3bb1;
+    color: #ffffff;
+    box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
+    transition: all .3s ease-in-out;
+}
+
+.btn-link {
+    color: #f5f5f5;
+    display: block;
+    font-size: .75em;
+    transition: color .3s ease-out;
+    text-decoration: none;
+}
+
+/*Hover & focus*/
+.field input:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.btn:hover {
+    background-color: #58CDFF;
+    color: #ffffff;
+    box-shadow: 0 8px 24px 0 #10277033;
+}
+
+.btn-link:hover {
+    color: #FF26A9;
+}
+
