@@ -11,7 +11,7 @@
     <title>Smoky | Sign In</title>
 </head>
 
-<body class="bg-black">
+<body class="bg-black body-container-signup">
     <nav class="navbar navbar-expand-lg">
         <div class="d-flex">
             <img class="logo-header" src="./public/img/smoky-logo-png.png" alt="">
@@ -45,7 +45,7 @@
         </div>
     </nav>
     <header className='w-100 vh-100'>
-        <!-- <img class="videoHome" src="./public/img/signin-header.jpg" alt="man vaping">   -->   
+        <!-- <img class="videoHome" src="https://images.unsplash.com/photo-1541701571234-ffe036ddf1d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80" alt="man vaping">  -->
     </header>
 
     <main>
@@ -97,6 +97,10 @@
                                     name="logpass" type="password">
                             </div>
                             <button class="btn" type="submit">Create</button>
+                            <div class="d-flex bg-google">
+                                <img class='bg-white img-google' src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt='Logo Google' />
+                                <a class='text-white p-2' href={url}>Sign up with Google</a>
+                            </div>
                         </form>
                     </div>
                 </div>

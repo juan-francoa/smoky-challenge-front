@@ -11,7 +11,7 @@
     <title>Smoky | Sign In</title>
 </head>
 
-<body class="bg-black">
+<body class="bg-black body-container-signin">
     <nav class="navbar navbar-expand-lg">
         <div class="d-flex">
             <img class="logo-header" src="./public/img/smoky-logo-png.png" alt="">
@@ -74,7 +74,11 @@
                                     name="logpass" type="password">
                             </div>
                             <button class="btn" type="submit">Login</button>
-                            <a href="./signup.html" class="btn-link d-flex justify-content-center">Create an account</a>
+                            <div class="d-flex bg-google">
+                                <img class='bg-white img-google' src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt='Logo Google' />
+                                <a class='text-white p-2' href={url}>Sign in with Google</a>
+                            </div>
+                            <a href="./signup.html" class="btn-link d-flex justify-content-center fs-6">Create an account</a>
                         </form>
                     </div>
                 </div>
