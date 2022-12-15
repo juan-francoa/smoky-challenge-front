@@ -24,7 +24,7 @@ export default function Navbar() {
                             </p>
                             <ul className="dropdown-menu bg-black">
                                 <li><Link to={"/vapers"}><p className="dropdown-item" >Vapers</p></Link></li>
-                                <li><p className="dropdown-item" >E-liquids</p></li>
+                                <li><Link to={"/eliquids"}> <p className="dropdown-item" >E-liquids</p></Link></li>
                             </ul>
                         </li>
                     </ul>
