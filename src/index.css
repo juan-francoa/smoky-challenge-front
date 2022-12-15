@@ -19,7 +19,6 @@
 .body-container-profile {
     background-image: url("https://images.unsplash.com/photo-1541701571234-ffe036ddf1d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80");
     background-size: contain;
-
 }
 
 nav {
@@ -33,7 +32,7 @@ nav {
     background-color: #111111;
 }
 
-.navbar p {
+.navbar a {
     font-size: 1.3em;
     color: white;
     text-decoration: none;
@@ -358,7 +357,6 @@ h5 {
 
 /*Buttons*/
 .btn {
-    margin: 1rem;
     border: none;
     border-radius: 4px;
     font-weight: bold;
@@ -368,7 +366,7 @@ h5 {
     background-color: #ff3bb1;
     color: #ffffff;
     box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.2);
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;;
 }
 
 .btn-link {
@@ -473,7 +471,7 @@ h5 {
 
 .product-card {
     width:20%;
-    height:70vh;
+    height:75vh;
     background: #000000;
     position: relative;
     display: flex;
@@ -481,18 +479,17 @@ h5 {
     place-content: center;
     place-items: center;
     overflow: hidden;
-    border-radius: 20px;
-    margin-top: 1.5em;    
+    border-radius: 20px;  
 }
 .card-img-top {
     width: 95%;
     height: 30vh;
-    border-radius: 1em 1em 0 0;
-    margin-top: .5em;
+    border-radius: 2em 2em 0 0;
 }
 
 .card-body {
     width: 80%;
+    height: auto;
     border-radius: 0 0 1em 1em;
 } 
 
@@ -503,7 +500,7 @@ h5 {
     margin-right: 1em;
 }
 
-.product-card img, h5, p, a{
+.product-card img, h5, p, button, div{
     z-index: 1;
 }
 
@@ -511,7 +508,7 @@ h5 {
     content: '';
     position: absolute;
     width: 100px;
-    height: 130%;
+    height: 150%;
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
 }
@@ -550,6 +547,7 @@ h5 {
     gap: 1em;
     padding: 4em 2em 4em 2em;
     transition: all .7s;
+    height: auto;
 }
 
 .profile-card:hover {
@@ -578,8 +576,25 @@ h5 {
     filter: brightness(1.5) contrast(1.5);
 }
 
-.main-full {
-    flex-grow: 1;
+.input-cart{
+    width: 30%;
+    height: 6vh;
+    background-color: #e77ecd;
+    border-radius: .5em;
+    color: white;
+}
+
+.input-cart:hover{
+    box-shadow: 0 0 15px 3px #ffffff, 0 0 8px 1px #ff00ff;
+}
+
+.price-container{
     width: 100%;
-    min-height: 100vh;
-  }
+    justify-content: space-around;
+}
+
+.price-container p{
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0 0 20px #FFFFFF;
+}

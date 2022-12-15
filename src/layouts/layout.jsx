@@ -7,7 +7,7 @@ export default function Layout(props) {
         <>
             <div className="bg-black">
                 <Navbar />
-                <div className='main-full'>
+                <div className='main-full '>
                     {props.children}
                 </div>
                 <Footer />
