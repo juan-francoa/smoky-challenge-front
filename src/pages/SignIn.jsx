@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 
 export default function SignIn() {
-  return (
+    return (
     <main>
         <div className="d-flex justify-content-center mt-3">
             <div className="card">
