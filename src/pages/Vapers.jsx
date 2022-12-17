@@ -42,7 +42,7 @@ export default function Vapers() {
             {category.map(e => <><input type="checkbox" onClick={e =>categ(e.target.value)} value={e}/>{e}</> )}
             </div> </div>
             <div className='d-flex flex-wrap gap-5 justify-content-center pt-4 pb-4'>
-                {vapers.length === 0?("NOT FOUND") : (vapers.map(e => <CardVaper name={e.name} description={e.description} price={e.price} img={e.photo} cont={e.amount} />))}
+                {vapers.length === 0?("NOT FOUND") : (vapers.map(e => <CardVaper name={e.name} description={e.description} price={e.price} img={e.photo} cont={e.amount} id={e._id} />))}
             </div>
         </div>
     )

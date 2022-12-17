@@ -7,18 +7,39 @@ import SignUp from './pages/SignUp';
 import Shopping from './pages/Shopping';
 import Vapers from './pages/Vapers';
 import Eliquids from './pages/Eliquids';
+import { useDispatch, useSelector } from "react-redux";
+import userAction from './redux/actions/userAction';
+import { useEffect } from 'react';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
+  let {logged, role, id} = useSelector((store) => store.userReducer);
+  let dispatch = useDispatch()
+
+  useEffect(() => {
+    let token = JSON.parse(localStorage.getItem('token'))
+    console.log(token?.token.user)
+    if(token){
+      dispatch(userAction.reEntry(token.token.user))
+    }
+  }, [])
+  console.log(logged, role, id)
+
   return (
     <BrowserRouter>
       <Layout>
         <Routes>
+
           <Route path="/*" element={<Home />} />
           <Route path="/signin" element={<SignIn/>} />
           <Route path="/signup" element={<SignUp/>} />
-          <Route path="/shopping" element={<Shopping/>} />
+          
+          <Route path="/shopping" element={<Shopping />} />
+        <Route element={<ProtectedRoute isAllowed={logged && role === "user"} redirect={"/"} />} >
+
           <Route path="/vapers" element={<Vapers/>} />
           <Route path="/eliquids" element={<Eliquids/>} />
+        </Route>
         </Routes>
       </Layout>
     </BrowserRouter>
