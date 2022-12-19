@@ -51,7 +51,6 @@ nav {
 
 .logo-header {
     width: 18%;
-
 }
 
 .user-logo {
@@ -375,7 +374,6 @@ h5 {
     color: #ffffff;
     box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.2);
     transition: all .3s ease-in-out;
-    ;
 }
 
 .btn-link {

@@ -29,7 +29,7 @@ export default function SignIn() {
                                         name="logpass" type="password" />
                                 </div>
                                 <button className="btn" type="submit">Login</button>
-                                <Link to={"/signup"}><p href="" className="btn-link d-flex justify-content-center fs-5">Create an account</p></Link>
+                                <Link to={"/signup"}><a href="" className="btn-link d-flex justify-content-center fs-6">Create an account</a></Link>
                             </form>
                         </div>
                     </div>

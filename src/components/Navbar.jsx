@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 
 export default function Navbar() {
+    NAVBAR
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="d-flex">
