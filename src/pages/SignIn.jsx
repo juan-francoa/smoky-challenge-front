@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import InputGral from '../components/InputGral';
 import ButtonSubmit from '../components/ButtonSubmit';
-import { useRef } from 'react'
+import { useRef } from 'react';
 import Swal from 'sweetalert2';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom"
