@@ -15,16 +15,16 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link to={"/"}><p className="nav-link active text-white fs-5 fw-bold" aria-current="page" >Home</p></Link>
+                                <Link to={"/"}><p className="nav-link active text-white fs-4 fw-bold" aria-current="page" >Home</p></Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <p className="nav-link dropdown-toggle text-white fs-5 fw-bold" role="button"
+                                <p className="nav-link dropdown-toggle text-white fs-4 fw-bold" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Products
                                 </p>
                                 <ul className="dropdown-menu bg-black">
-                                    <li><Link to={"/vapers"}><p className="dropdown-item"> Vapers</p></Link></li>
-                                    <li><Link to={"/eliquids"}> <p className="dropdown-item"> E-liquids</p></Link></li>
+                                    <li><Link to={"/Vapers"}><p className="dropdown-item text-white"> Vapers</p></Link></li>
+                                    <li><Link to={"/Eliquids"}> <p className="dropdown-item text-white"> E-liquids</p></Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -41,8 +41,8 @@ export default function Navbar() {
                     </p>
                     <Link to={"/signin"}></Link>
                     <ul className="dropdown-menu bg-black">
-                        <li><Link to={"/SignIn"}><p className="dropdown-item"> Sign In</p></Link></li>
-                        <li><Link to={"/SignUp"}> <p className="dropdown-item"> Sign Up</p></Link></li>
+                        <li><Link to={"/SignIn"}><p className="dropdown-item text-white"> Sign In</p></Link></li>
+                        <li><Link to={"/SignUp"}> <p className="dropdown-item text-white"> Sign Up</p></Link></li>
                     </ul>
                 </li>
                 <p> <Link to={"/shopping"}><img className="cart-logo" src="img/carrito.png" alt="cart logo" />  </Link></p>

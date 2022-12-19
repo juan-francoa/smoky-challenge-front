@@ -12,7 +12,7 @@ export default function Home() {
             </header>
 
             <main>
-                <h2 className="text-white categories-text">Visit our awesome experience</h2>
+                <h2 className="text-white categories-text fs-1">Visit the Smoky experience</h2>
                 <section className="images-section d-flex flex-wrap">
                     <div className="img-category-1">Equipments</div>
                     <div className="img-category-2">Liquids</div>
@@ -35,12 +35,7 @@ export default function Home() {
                             to do
                             best, listen to them and create the best products in the market.
 
-                            So as you check our brands make sure that you are buying a genuine Smoky product by making sure
-                            the
-                            Smoky trademark, QRJOY(R) is on the product along with out branding name. We look forward to
-                            bringing
-                            you excellent brands, and excellent products as we continue to take the vaping world by storm.
-                        </p>
+                            </p>
                     </div>
                     <div className="img-container">
                         <img className="main-img" src="img/main-home-img.jpg" alt="man vaping" />

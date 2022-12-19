@@ -42,11 +42,13 @@ nav {
 }
 
 .nav-div-container {
-    text-shadow: #58CDFF 0px 0px 5px, #58CDFF 0px 0px 10px, #58CDFF 0px 0px 15px, #58CDFF 0px 0px 20px, #58CDFF 0px 0px 30px, #58CDFF 0px 0px 40px, #58CDFF 0px 0px 50px, #58CDFF 0px 0px 75px, 2px 2px 2px #58CDFFf5;
+    /*  text-shadow: #58CDFF 0px 0px 5px, #58CDFF 0px 0px 10px, #58CDFF 0px 0px 15px, #58CDFF 0px 0px 20px, #58CDFF 0px 0px 30px, #58CDFF 0px 0px 40px, #58CDFF 0px 0px 50px, #58CDFF 0px 0px 75px, 2px 2px 2px #58CDFFf5; */
+    /* text-shadow: 0 0 5px #24b6f4, 0 0 10px #58CDFF, 0 0 15px #58CDFF, 0 0 20px #58CDFF, 0 0 25px #58CDFF, 0 0 30px #58CDFF, 0 0 35px #58CDFF; */
 }
 
-.nav-div-container a:hover {
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(255, 255, 255, 0.959);
+.nav-div-container p:hover {
+    /* text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(255, 255, 255, 0.959); */
+    text-shadow: 0 0 5px #FF2D95, 0 0 10px #FF2D95, 0 0 15px #FF2D95, 0 0 20px #FF2D95, 0 0 25px #FF2D95, 0 0 30px #FF2D95, 0 0 35px #FF2D95;
 }
 
 .logo-header {
@@ -97,11 +99,11 @@ nav {
 }
 
 .text-container h2 {
-    text-shadow: #58CDFF 0px 0px 5px, #58CDFF 0px 0px 10px, #58CDFF 0px 0px 15px, #58CDFF 0px 0px 20px, #58CDFF 0px 0px 30px, #58CDFF 0px 0px 40px, #58CDFF 0px 0px 50px, #58CDFF 0px 0px 75px, 2px 2px 2px #58CDFFf5;
+    text-shadow: 0 0 5px #24b6f4, 0 0 10px #58CDFF, 0 0 15px #58CDFF, 0 0 20px #58CDFF, 0 0 25px #58CDFF, 0 0 30px #58CDFF, 0 0 35px #58CDFF;
 }
 
 .text-container h2:hover {
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(255, 255, 255, 0.959);
+    text-shadow: 0 0 5px #FF2D95, 0 0 10px #FF2D95, 0 0 15px #FF2D95, 0 0 20px #FF2D95, 0 0 25px #FF2D95, 0 0 30px #FF2D95, 0 0 35px #FF2D95;
 }
 
 .text-container {
@@ -111,6 +113,10 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 2em;
+}
+
+.text-container p {
+    text-align: center;
 }
 
 .aboutus-container {
@@ -129,7 +135,7 @@ nav {
     justify-content: center;
     margin-top: 4em;
     gap: 2em;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(206, 0, 203, 0);
+    text-shadow: 0 0 5px #FF2D95, 0 0 10px #FF2D95, 0 0 15px #FF2D95, 0 0 20px #FF2D95, 0 0 25px #FF2D95, 0 0 30px #FF2D95, 0 0 35px #FF2D95;
 }
 
 .img-category-1 {
@@ -141,7 +147,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bolder;
     color: white;
     font-size: 2em;
 }
@@ -162,7 +167,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bolder;
     color: white;
     font-size: 2em;
 }
@@ -175,7 +179,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bolder;
     color: white;
     font-size: 2em;
 }
@@ -188,20 +191,19 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bolder;
     color: white;
     font-size: 2em;
 }
 
 .categories-text {
-    text-shadow: #58CDFF 0px 0px 5px, #58CDFF 0px 0px 10px, #58CDFF 0px 0px 15px, #58CDFF 0px 0px 20px, #58CDFF 0px 0px 30px, #58CDFF 0px 0px 40px, #58CDFF 0px 0px 50px, #58CDFF 0px 0px 75px, 2px 2px 2px #58CDFFf5;
+    text-shadow: 0 0 5px #24b6f4, 0 0 10px #58CDFF, 0 0 15px #58CDFF, 0 0 20px #58CDFF, 0 0 25px #58CDFF, 0 0 30px #58CDFF, 0 0 35px #58CDFF;
     display: flex;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .categories-text:hover {
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(255, 255, 255, 0.959);
+    text-shadow: 0 0 5px #FF2D95, 0 0 10px #FF2D95, 0 0 15px #FF2D95, 0 0 20px #FF2D95, 0 0 25px #FF2D95, 0 0 30px #FF2D95, 0 0 35px #FF2D95;
 }
 
 .text-video {
@@ -224,8 +226,7 @@ nav {
 
 .footer-container h3,
 h5 {
-    color: #FF2D95;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px;
+    text-shadow: 0 0 5px #24b6f4, 0 0 10px #58CDFF, 0 0 15px #58CDFF, 0 0 20px #58CDFF, 0 0 25px #58CDFF, 0 0 30px #58CDFF, 0 0 35px #58CDFF;
 }
 
 .redes-img {
@@ -248,10 +249,11 @@ h5 {
     background-color: #000000;
 }
 
-.map {
+.map-img {
     display: flex;
     justify-content: center;
     padding-top: 25px;
+    border-radius: 1em;
 }
 
 .map-text img {
@@ -265,11 +267,13 @@ h5 {
 
 .map-text h3 {
     margin-bottom: 1em;
+    font-weight: bold;
 }
 
 .map-text {
     line-height: 1em;
     width: 35%;
+    gap:.3em;
 }
 
 .footer-warning {
@@ -325,7 +329,8 @@ h5 {
     display: flex;
     justify-content: center;
     font-size: 2em;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px #FF2D95;
+    text-shadow: 0 0 5px #FF2D95, 0 0 10px #FF2D95, 0 0 15px #FF2D95, 0 0 20px #FF2D95, 0 0 25px #FF2D95, 0 0 30px #FF2D95, 0 0 35px #FF2D95;
+    font-weight: bold;
 }
 
 /*Inputs*/
@@ -546,10 +551,13 @@ div {
     color: white;
     text-shadow: #58CDFF 0px 0px 5px, #58CDFF 0px 0px 10px, #58CDFF 0px 0px 15px, #58CDFF 0px 0px 20px, #58CDFF 0px 0px 30px, #58CDFF 0px 0px 40px, #58CDFF 0px 0px 50px, #58CDFF 0px 0px 75px, 2px 2px 2px #58CDFFf5;
     text-align: center;
-
 }
 
-.payment-container{
-    width: 90%!important;
+.payment-container {
+    width: 90% !important;
     padding-top: 1em;
+}
+
+.dropdown-item:hover{
+    background-color: black;
 }
