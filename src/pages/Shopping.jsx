@@ -9,21 +9,19 @@ import shopActions from '../redux/actions/shopAction';
 import userAction from '../redux/actions/userAction';
 
 export default function Shopping() {
+
+
+  let [total, setTotal] = useState(0)
+  const dispatch = useDispatch();
   let { shop } = useSelector((store) => store.shopReducer);
   let { eliquids } = useSelector((store) => store.eliquidsReducer);
   let { vapers } = useSelector((store) => store.vapersReducer);
   let { id } = useSelector((store) => store.userReducer);
-  let [total, setTotal] = useState(0)
-  const dispatch = useDispatch();
-  let [product, setProduct] = useState([])
-
-
-
+  let [product, setProduct] = useState(shop)
   useEffect(() => {
     const data = { name: "", category: "" }
     let tot = 0
     dispatch(shopActions.getShops(id))
-    console.log(shop, id)
     if (shop.products) {
       let array = shop.products.map(e => {
         dispatch(eliquidsActions.getEliquids(data))
@@ -48,15 +46,17 @@ export default function Shopping() {
       setProduct(array)
       setTotal(tot)
     }
-  }, [id])
+  }, [dispatch, id, shop])
 
- 
+
+
+
   return (
     <div>
       <section class="orden__container body-container-shopping">
         <h2 className='title text-white mb-4'>Shopping</h2>
         <div className='orden__completa d-flex flex-column'>
-          {product.length > 0 ? (product.map(e => <CardShopping img={e.photo} name={e.name} price={e.price} count={e.count} />)) : ("NOT FOUND")}
+          {product.length > 0 ? (product.map(e => <CardShopping img={e.photo} name={e.name} price={e.price} count={e.count} cardId={e._id} />)) : ("NOT FOUND")}
         </div>
         <div class="shopping__sumatoria">
           <div class="orden__concepto">

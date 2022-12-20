@@ -11,7 +11,8 @@ export default function CardVaper(props) {
     const dispatch = useDispatch();
     let _id = useSelector((store) => store.userReducer);
     const numb = (e) => {
-        setCount(e.target.value)
+        setCount(Number(e.target.value))
+        console.log(count, typeof count)
     }
     const send = (e) => {
         console.log( )
