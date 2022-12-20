@@ -37,7 +37,7 @@ export default function Vapers() {
         console.log(check)
     }
     return (
-        <div className="bg-black body-container-products d-flex flex-column flex-wrap gap-5 justify-content-center pb-2">
+        <div className="bg-black body-container-products d-flex flex-column flex-wrap gap-3 justify-content-center pb-2">
             <div className='filter-container d-flex flex-wrap gap-5 justify-content-center align-items-center'>
                 <div className='box'>
                     <div class="search-box">
@@ -50,10 +50,12 @@ export default function Vapers() {
 
                 <div>
                     <label className='gap-4 d-flex'>
-                        {category.map(e => <><input type="checkbox" onClick={e => categ(e.target.value)} value={e} /><span>{e}</span></>)}
+                        {category.map(e => <><input type="checkbox" onClick={e => categ(e.target.value)} value={e} />
+                        <span>{e}</span></>)}
                     </label>
                 </div>
             </div>
+            <h1 className='title-products'>Vapers</h1>
             <div className='d-flex flex-wrap gap-5 justify-content-center pt-4 pb-4'>
                 {vapers.length === 0 ? (<> <iframe src="https://giphy.com/embed/j9XoexYMmd7LdntEK4" width="480" height="276" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/404-notfound-under-maintenance-j9XoexYMmd7LdntEK4"></a></p> </>) : (vapers.map(e => <CardVaper name={e.name} description={e.description} price={e.price} img={e.photo} cont={e.amount} />))}
             </div>
