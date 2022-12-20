@@ -11,7 +11,7 @@ export default function Home() {
                 <video className='videoHome' src="img/video/headerBackground.mp4" autoPlay muted loop></video>
             </header>
 
-            <main>
+            <main className='pb-4'>
                 <h2 className="text-white categories-text fs-1">Visit the Smoky experience</h2>
                 <section className="images-section d-flex flex-wrap">
                     <div className="img-category-1">Equipments</div>
@@ -35,7 +35,7 @@ export default function Home() {
                             to do
                             best, listen to them and create the best products in the market.
 
-                            </p>
+                        </p>
                     </div>
                     <div className="img-container">
                         <img className="main-img" src="img/main-home-img.jpg" alt="man vaping" />

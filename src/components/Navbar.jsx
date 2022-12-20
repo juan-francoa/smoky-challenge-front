@@ -23,8 +23,8 @@ export default function Navbar() {
                                     Products
                                 </p>
                                 <ul className="dropdown-menu bg-black">
-                                    <li><Link to={"/Vapers"}><p className="dropdown-item text-white"> Vapers</p></Link></li>
-                                    <li><Link to={"/Eliquids"}> <p className="dropdown-item text-white"> E-liquids</p></Link></li>
+                                    <li><Link to={"vapers"}><p className="dropdown-item text-white"> Vapers</p></Link></li>
+                                    <li><Link to={"/eliquids"}> <p className="dropdown-item text-white"> E-liquids</p></Link></li>
                                 </ul>
                             </li>
                         </ul>

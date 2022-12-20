@@ -35,18 +35,15 @@ function App() {
           <Route path="/signup" element={<SignUp/>} />
           
           <Route path="/shopping" element={<Shopping />} />
-        <Route element={<ProtectedRoute isAllowed={logged && role === "user"} redirect={"/"} />} >
-
           <Route path="/vapers" element={<Vapers/>} />
           <Route path="/eliquids" element={<Eliquids/>} />
+        <Route element={<ProtectedRoute isAllowed={logged && role === "user"} redirect={"/"} />} >
+
         </Route>
         </Routes>
       </Layout>
     </BrowserRouter>
   )
 }
-
-
-
 
 export default App;

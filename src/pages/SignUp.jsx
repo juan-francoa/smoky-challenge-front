@@ -56,7 +56,7 @@ export default function SignUp() {
     }
 
     return (
-        <main>
+        <main className='body-container-signup pb-5'>
             <div className="d-flex justify-content-center mt-3">
                 <div className="card">
                     <div className="card2">

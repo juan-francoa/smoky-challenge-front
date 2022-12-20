@@ -14,14 +14,14 @@ export default function CardVaper(props) {
         setCount(e.target.value)
     }
     const send = (e) => {
-        console.log( )
+        console.log()
         if (count > 0) {
             if (bool || (e.target.name === "delete")) {
                 setBool(!bool)
                 if (e.target.name === "delete") {
-                    const data1 ={
+                    const data1 = {
                         userId: _id.id,
-                        products : e.target.value
+                        products: e.target.value
                     }
                     dispatch(shopActions.deleteShops(data1))
                 }
@@ -38,9 +38,9 @@ export default function CardVaper(props) {
         }
         else if (e.target.name === "delete") {
             setBool(!bool)
-            const data1 ={
+            const data1 = {
                 userId: _id.id,
-                products : e.target.value
+                products: e.target.value
             }
             dispatch(shopActions.deleteShops(data1))
         }
@@ -48,8 +48,8 @@ export default function CardVaper(props) {
 
     return (
         <div className="product-card">
-            <img src={img} className="card-img-top pt-1" alt="..." />
-            <div className="card-body d-flex justify-content-center flex-column align-items-center bg-black gap-1">
+            <img src={img} className="card-img-top" />
+            <div className="card-body d-flex justify-content-evenly flex-column align-items-center bg-black gap-1">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text mb-0 text-white mi">{description}.</p>
                 <div className="price-container d-flex">

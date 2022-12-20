@@ -26,7 +26,7 @@ export default function Footer() {
                     <h3 className="text-white">Contact us:</h3>
                     <p className='fs-5'><img src="img/tienda.png" /> Monday-Friday: 7:00 a.m. a 6:00 p.m.</p>
                     <p className='fs-5'><img src="img/llamada.png" /> Phone number: +57 321 984 8497</p>
-                    <p className='fs-5'> <img src="img/marcador-de-posicion.png" /> Adress: New York City</p>
+                    <p className='fs-5'> <img src="img/marcador-de-posicion.png" /> Adress: Bogotá, Colombia</p>
                     <p className='fs-5'><a href="https://mail.google.com/mail/u/0/"><img src="img/email.png" alt="" /> Email:
                         smoky.vaping@gmail.com</a></p>
                 </div>

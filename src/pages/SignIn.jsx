@@ -51,9 +51,9 @@ export default function SignIn() {
     };
 
   return (
-    <main>
+    <main className='body-container-signin pb-5'>
         <div className="d-flex justify-content-center mt-3">
-            <div className="card">
+            <div className="card gap-2">
                 <div className="card2">
                     <div className="card3">
                         <h3 className="tite text-white mb-4">Sign In</h3>

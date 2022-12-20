@@ -50,24 +50,26 @@ export default function Shopping() {
     }
   }, [id])
 
- 
+
   return (
-    <div>
-      <section class="orden__container body-container-shopping">
-        <h2 className='title text-white mb-4'>Shopping</h2>
-        <div className='orden__completa d-flex flex-column'>
-          {product.length > 0 ? (product.map(e => <CardShopping img={e.photo} name={e.name} price={e.price} count={e.count} />)) : ("NOT FOUND")}
-        </div>
-        <div class="shopping__sumatoria">
-          <div class="orden__concepto">
-            <p>Total</p>
+    <main className='bg-shop pb-5'>
+      <div className="d-flex justify-content-center mt-3">
+        <section class="orden__container">
+          <h2 className='title text-white mb-4'>Shopping</h2>
+          <div className='orden__completa d-flex flex-column'>
+            {product.length > 0 ? (product.map(e => <CardShopping img={e.photo} name={e.name} price={e.price} count={e.count} />)) : ("NOT FOUND")}
           </div>
-          <div class="orden__monto">
-            <p>$ {total}</p>
+          <div class="shopping__sumatoria">
+            <div class="orden__concepto">
+              <p>Total</p>
+            </div>
+            <div class="orden__monto">
+              <p>$ {total}</p>
+            </div>
           </div>
-        </div>
-        <button class="btn-link btn">BUY</button>
-      </section>
-    </div>
+          <button class="btn-link btn">BUY</button>
+        </section>
+      </div>
+    </main>
   )
 }
