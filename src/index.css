@@ -14,10 +14,11 @@
 }
 
 .body-container-products {
-    background-image: url("../public/img/bg-cards.jpg");
+    background-image: url("../public/img/bg-cart.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
 }
 
 .body-container-profile {
@@ -530,7 +531,7 @@ div {
     height: 6vh;
     background-color: #ffffff;
     border-radius: .5em;
-    color: white;
+    color: black;
 }
 
 .input-cart:hover {
@@ -695,4 +696,109 @@ div {
         display: block;
         margin-block-start: 40px;
     }
+}
+
+
+/* FILTERS */
+
+.filter-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0000009a;
+    padding: .5em 0 .5em 0;
+}
+
+.filter-container div {
+    margin: 10px;
+}
+
+.filter-container div label {
+    cursor: pointer;
+}
+
+.filter-container div label input[type="checkbox"] {
+    display: none;
+}
+
+.filter-container div label span {
+    position: relative;
+    display: inline-block;
+    background: #424242;
+    padding: 15px 30px;
+    color: #555;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+}
+
+.filter-container div label span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, .1);
+}
+
+.filter-container div:nth-child(2n + 1) label input[type="checkbox"]:checked ~ span {
+    background: #FF26A9;
+    color: #fff;
+    box-shadow: 0 2px 20px #FF26A9;
+}
+
+.filter-container div:nth-child(2n + 2) label input[type="checkbox"]:checked ~ span {
+    background: #58CDFF;
+    color: #fff;
+    box-shadow: 0 2px 20px #58CDFF;
+}
+
+/* SEARCH */
+.box {
+    width: 25%;
+}
+
+.box .search-box {
+    position: relative;
+    width: 100%;
+    height: 7vh;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.70);
+    border-radius: 25px;
+}
+
+.search-box input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background: #fff;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.icon {
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 50px;
+    background: #58CDFF;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 0 25px 25px 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.icon img{
+    width: 60%;
+   padding-bottom: .5em;
 }

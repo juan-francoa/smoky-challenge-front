@@ -56,7 +56,7 @@ export default function CardVaper(props) {
                     <p>${price}</p>
                     <input className="input-cart" onChange={numb} type="number" min="0" max={cont} placeholder={0} name="quantity" id="quantity" />
                 </div>
-                {bool ? (<button onClick={send} value={id} className="btn btn-cart">Add to cart</button>) : (<><button onClick={send} value={id} className="btn btn-cart">Add to cart</button><button onClick={send} value={id} name={"delete"} className="btn btn-cart bg-danger">Delete to cart</button> </>)}
+                {bool ? (<button onClick={send} value={id} className="btn btn-cart">Add to cart</button>) : (<><button onClick={send} value={id} className="btn btn-cart">Add to cart</button><button onClick={send} value={id} name={"delete"} className="btn btn-cart bg-danger">Delete from cart</button> </>)}
             </div>
         </div>
     )
