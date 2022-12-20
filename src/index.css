@@ -344,7 +344,7 @@ h5 {
 }
 
 .input-icon {
-    height: 1em;
+    height: 1.2em;
     width: 1em;
     fill: #FF26A9;
 }
@@ -413,8 +413,8 @@ h5 {
 }
 
 .product-card {
-    width: 20%;
-    min-height: 100vh;
+    width: 25rem;
+    min-height: 30rem;
     background: #000000;
     position: relative;
     display: flex;
@@ -428,9 +428,9 @@ h5 {
 }
 
 .card-img-top {
-    width: 95%;
-    height: 30vh;
-    object-fit: contain;
+    width: 98%;
+    height: 50%;
+    object-fit: cover;
 }
 
 .card-body {
@@ -527,8 +527,8 @@ div {
 }
 
 .input-cart {
-    width: 30%;
-    height: 6vh;
+    width: 20%;
+    height: 4vh;
     background-color: #ffffff;
     border-radius: .5em;
     color: black;
@@ -701,19 +701,6 @@ div {
 
 /* FILTERS */
 
-.filter-container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #0000009a;
-    padding: .5em 0 .5em 0;
-}
-
-.filter-container div {
-    margin: 10px;
-}
-
 .filter-container div label {
     cursor: pointer;
 }
@@ -736,15 +723,7 @@ div {
     overflow: hidden;
 }
 
-.filter-container div label span:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: rgba(255, 255, 255, .1);
-}
+
 
 .filter-container div:nth-child(2n + 1) label input[type="checkbox"]:checked~span {
     background: #FF26A9;
@@ -766,15 +745,15 @@ div {
 .box .search-box {
     position: relative;
     width: 100%;
-    height: 7vh;
+    height: 8vh;
     margin: auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.70);
+   
     border-radius: 25px;
 }
 
 .search-box input {
     position: absolute;
-    height: 100%;
+    height: 60%;
     width: 100%;
     border-radius: 25px;
     background: #fff;
@@ -789,8 +768,8 @@ div {
     right: -20px;
     top: 0;
     width: 50px;
-    background: #58CDFF;
-    height: 100%;
+    background: #383838;
+    height: 60%;
     text-align: center;
     line-height: 50px;
     border-radius: 0 25px 25px 0;
@@ -799,8 +778,8 @@ div {
 }
 
 .icon img {
-    width: 60%;
-    padding-bottom: .5em;
+    width: 50%;
+    padding-bottom: 10px;
 }
 
 ::marker {
