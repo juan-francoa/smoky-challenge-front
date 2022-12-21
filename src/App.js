@@ -11,19 +11,19 @@ import { useDispatch, useSelector } from "react-redux";
 import userAction from './redux/actions/userAction';
 import { useEffect } from 'react';
 import ProtectedRoute from './components/ProtectedRoute';
+import MyProfile from './pages/MyProfile';
 
 function App() {
-  let {logged, role, id} = useSelector((store) => store.userReducer);
+  let { logged, role, id } = useSelector((store) => store.userReducer);
   let dispatch = useDispatch()
 
   useEffect(() => {
     let token = JSON.parse(localStorage.getItem('token'))
     console.log(token?.token.user)
-    if(token){
+    if (token) {
       dispatch(userAction.reEntry(token.token.user))
     }
   }, [])
-  console.log(logged, role, id)
 
   return (
     <BrowserRouter>
@@ -31,15 +31,15 @@ function App() {
         <Routes>
 
           <Route path="/*" element={<Home />} />
-          <Route path="/signin" element={<SignIn/>} />
-          <Route path="/signup" element={<SignUp/>} />
-          
-          <Route path="/shopping" element={<Shopping />} />
-          <Route path="/vapers" element={<Vapers/>} />
-          <Route path="/eliquids" element={<Eliquids/>} />
-        <Route element={<ProtectedRoute isAllowed={logged && role === "user"} redirect={"/"} />} >
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
 
-        </Route>
+          <Route path="/shopping" element={<Shopping />} />
+          <Route path="/vapers" element={<Vapers />} />
+          <Route path="/eliquids" element={<Eliquids />} />
+          <Route element={<ProtectedRoute isAllowed={logged && role === "user"} redirect={"/"} />} >
+            <Route path="/myprofile" element={<MyProfile />} />
+          </Route>
         </Routes>
       </Layout>
     </BrowserRouter>

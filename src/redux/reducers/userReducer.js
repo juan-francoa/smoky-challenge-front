@@ -49,6 +49,7 @@ const userReducer = createReducer(initialState,
                     let {user} = response
                     let newState = {
                         ...state,
+                        email: user.email,
                         name: user.name,
                         photo: user.photo,
                         role: user.role,
