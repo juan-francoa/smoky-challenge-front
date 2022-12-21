@@ -1,10 +1,38 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
+import LogOutBtn from './LogOutBtn';
+import userAction from '../redux/actions/userAction';
+import Swal from 'sweetalert2'
 
 export default function Navbar() {
-    let { logged, role, id , photo} = useSelector((store) => store.userReducer);
+    let { logged, role, id, photo, token, name } = useSelector((store) => store.userReducer);
 
+    let dispatch = useDispatch()
+    const { signOff } = userAction
+
+    function logOut() {
+        Swal.fire({
+            title: 'Are you sure you want to log out?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, log out!'
+        })
+            .then((result) => {
+                if (result.isConfirmed) {
+                    dispatch(signOff(token))
+                    Swal.fire(
+                        'Logged out!',
+                        'You have been logged out',
+                        'success'
+                    )
+                }
+            })
+    }
 
     return (
         <nav className="navbar navbar-expand-lg">
@@ -40,17 +68,19 @@ export default function Navbar() {
                     <p className="nav-link dropdown-toggle text-white fs-5 fw-bold" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <Link to={"/signin"}>
-                            {logged?(<img className="user-logo" src={photo} alt="user logo" />):
-                            (<img className="user-logo" src="img/usuario.png" alt="user logo" />)}     
+                            {logged ? (<img className="user-logo" src={photo} alt="user logo" />) :
+                                (<img className="user-logo" src="img/usuario.png" alt="user logo" />)}
                         </Link>
                     </p>
                     <Link to={"/signin"}></Link>
                     <ul className="dropdown-menu bg-black">
-                        {logged ? (<> 
-                        <li><Link to={"/myprofile"}><p className="dropdown-item text-white"> My profile</p></Link></li>
-                        <li> <p className="dropdown-item text-white"> Log out</p></li></>) :
-                        (<><li><Link to={"/SignIn"}><p className="dropdown-item text-white"> Sign In</p></Link></li>
-                        <li><Link to={"/SignUp"}> <p className="dropdown-item text-white"> Sign Up</p></Link></li> </>)}
+                        {logged ? (<>
+                            <li><Link to={"/myprofile"}><p className="dropdown-item text-white"> My profile</p></Link></li>
+                            <NavLink to="/">
+                                <LogOutBtn className="dropdown-item text-white" type={"text"} text={"Exit"} fx={logOut} ></LogOutBtn>
+                            </NavLink></>) :
+                            (<><li><Link to={"/SignIn"}><p className="dropdown-item text-white"> Sign In</p></Link></li>
+                                <li><Link to={"/SignUp"}> <p className="dropdown-item text-white"> Sign Up</p></Link></li> </>)}
                     </ul>
                 </li>
                 <p> <Link to={"/shopping"}><img className="cart-logo" src="img/carrito.png" alt="cart logo" />  </Link></p>
