@@ -47,7 +47,7 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link to={"/"}><p className="nav-link active text-white fs-4 fw-bold" aria-current="page" >Home</p></Link>
+                                <Link to={"/"}><p className="nav-link text-white fs-4 fw-bold" aria-current="page" >Home</p></Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <p className="nav-link dropdown-toggle text-white fs-4 fw-bold" role="button"

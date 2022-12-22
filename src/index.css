@@ -26,6 +26,7 @@
     background-image: url("https://images.unsplash.com/photo-1541701571234-ffe036ddf1d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80%22");
     background-size: contain;
 }
+
 .img-category-1 {
     width: 23rem;
     height: 60vh;
@@ -88,17 +89,19 @@
 
 
 .navbar{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(26, 26, 26);
     display: flex;
-    min-height: 15rem;
+    min-height: 9rem;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     color: aquamarine;
+    padding: 0 2em 0 2em;
 }
+
 .logo-header{
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
 }
 .user-logo-container{
     gap: 2rem;
