@@ -3,6 +3,7 @@ import { useState } from 'react'
 import shopActions from '../redux/actions/shopAction'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
+import "../cardvaperliquids.css"
 
 export default function CardVaper(props) {
     let { name, description, price, img, cont, id } = props

@@ -20,12 +20,8 @@ export default function CardShopping(props) {
                 <div className="producto">
                     <img src={img} alt={name} />
                     <p>{name}</p>
-                    <div className="producto__monto">
-                        <p>${price}x{count}={Number(price)*Number(count)}</p>
-                    </div>
-                </div>
-                <div >
-                    <button value={cardId} onClick={dele}>Delete</button>
+                        <p>${price}x{count}={Number(price)*Number(count)}</p> 
+               <button value={cardId} onClick={dele}>Delete</button>
                 </div>
             </div>
         </div>

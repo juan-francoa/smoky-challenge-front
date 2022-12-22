@@ -3,7 +3,7 @@ import React from 'react'
 export default function Home() {
     return (
         <div className='w-100'>
-            <div className='w-100'>
+            <div className='video'>
                 <p className="text-video">
                     Smoky offers the widest variety and longest lasting vaping products on the market. Check out our complete
                     lineup of vape devices for every type of vaping experience.

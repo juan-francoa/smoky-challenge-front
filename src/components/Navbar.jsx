@@ -55,8 +55,8 @@ export default function Navbar() {
                                     Products
                                 </p>
                                 <ul className="dropdown-menu bg-black">
-                                    <li><Link to={"vapers"}><p className="dropdown-item text-white"> Vapers</p></Link></li>
-                                    <li><Link to={"/eliquids"}> <p className="dropdown-item text-white"> E-liquids</p></Link></li>
+                                    <li><Link to={"vapers"}><p className="dropdown-item text-white bg-black"> Vapers</p></Link></li>
+                                    <li><Link to={"/eliquids"}> <p className="dropdown-item text-white bg-black"> E-liquids</p></Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -75,9 +75,9 @@ export default function Navbar() {
                     <Link to={"/signin"}></Link>
                     <ul className="dropdown-menu bg-black">
                         {logged ? (<>
-                            <li><Link to={"/myprofile"}><p className="dropdown-item text-white"> My profile</p></Link></li>
+                            <li><Link to={"/myprofile"}><p className="dropdown-item text-white bg-black"> My profile</p></Link></li>
                             <NavLink to="/">
-                                <LogOutBtn className="dropdown-item text-white" type={"text"} text={"Exit"} fx={logOut} ></LogOutBtn>
+                                <LogOutBtn className="dropdown-item text-white bg-black" type={"text"} text={"Exit"} fx={logOut} ></LogOutBtn>
                             </NavLink></>) :
                             (<><li><Link to={"/SignIn"}><p className="dropdown-item text-white"> Sign In</p></Link></li>
                                 <li><Link to={"/SignUp"}> <p className="dropdown-item text-white"> Sign Up</p></Link></li> </>)}

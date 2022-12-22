@@ -7,6 +7,7 @@ import eliquidsActions from '../redux/actions/eliquidsAction'
 import vapersActions from '../redux/actions/vapersAction';
 import shopActions from '../redux/actions/shopAction';
 import userAction from '../redux/actions/userAction';
+import "../shop.css"
 
 export default function Shopping() {
   let [total, setTotal] = useState(0)
@@ -47,21 +48,21 @@ export default function Shopping() {
   }, [dispatch, id, shop])
 
   return (
-    <div>
-      <section class="orden__container body-container-shopping">
-        <h2 className='title text-white mb-4'>Shopping</h2>
-        <div className='orden__completa d-flex flex-column'>
+    <div className='containershop bg-shop'>
+      <section className="orden__container ">
+        <h2 className='title text-white'>Shopping</h2>
+        <div className='orden__completa '>
           {product?.length > 0 ? (product.map(e => <CardShopping img={e.photo} name={e.name} price={e.price} count={e.count} cardId={e._id} />)) : ("NOT FOUND")}
         </div>
-        <div class="shopping__sumatoria">
-          <div class="orden__concepto">
+        <div className="shopping__sumatoria">
+          <div className="orden__concepto">
             <p>Total</p>
           </div>
-          <div class="orden__monto">
+          <div className="orden__monto">
             <p>$ {total}</p>
           </div>
+          <button className="btn-link btn">BUY</button>
         </div>
-        <button class="btn-link btn">BUY</button>
       </section>
     </div>
   )

@@ -1,0 +1,139 @@
+/* Shopping */
+.bg-shop {
+    background-image: url("../public/img/bg-cart.jpg");
+    background-size: cover;
+}
+
+.containershop{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.orden__container {
+
+        min-height: 50vh;
+        padding: 18px;
+        justify-content: center;
+        width: 50rem;
+        color: white;
+        background-color: blueviolet;
+        margin: 2rem;
+        border-radius: 20px;
+}
+
+.orden__container h2 {
+    display: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-block-end: 46px;
+}
+
+.orden__container h2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #797979;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    margin-inline-end: 24px;
+    width: 24px;
+}
+
+.shopping__sumatoria {
+    align-items: center;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.6rem;
+    justify-content: space-between;
+    margin-block-end: 18px;
+    padding: 18px;
+    width: inherit;
+}
+
+.shopping__sumatoria p {
+    margin: 0;
+}
+
+.orden__concepto p:nth-child(1) {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: black;
+}
+
+.orden__productos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 8rem;
+    background-color: #797979;
+    margin-bottom: 1rem;
+}
+
+.orden__completa {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+
+.producto__item {
+    align-items: center;
+}
+
+.producto {
+        align-items: center;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+.producto img {
+    height: 76px;
+    border-radius: 20px;
+    object-fit: cover;
+    width: 76px;
+}
+
+.producto p {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.producto__monto {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.producto__monto p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+}
+
+.producto__monto {
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-image: url("");
+    cursor: pointer;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+}
+
+.pricedeletee{
+    display: flex;
+    flex-wrap: wrap;
+}
+.orden__monto{
+    color:black
+}

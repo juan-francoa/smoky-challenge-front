@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import axios from 'axios';
 import url  from '../url';
 import Swal from 'sweetalert2';
+import "../sign.css"
 
 export default function SignUp() {
 
@@ -56,8 +57,8 @@ export default function SignUp() {
     }
 
     return (
-        <main className='body-container-signup pb-5'>
-            <div className="d-flex justify-content-center mt-3">
+        <main className='body-container-signup'>
+            <div className="d-flex justify-content-center">
                 <div className="card">
                     <div className="card2">
                         <div className="card3">
