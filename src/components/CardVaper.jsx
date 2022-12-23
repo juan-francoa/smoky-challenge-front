@@ -3,10 +3,12 @@ import { useState } from 'react'
 import shopActions from '../redux/actions/shopAction'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
+import eliquidsActions from '../redux/actions/eliquidsAction';
+import vapersActions from '../redux/actions/vapersAction';
 import "../cardvaperliquids.css"
 
 export default function CardVaper(props) {
-    let { name, description, price, img, cont, id } = props
+    let { name, description, price, img, cont, id , type} = props
     let [count, setCount] = useState(0)
     let [bool, setBool] = useState(true)
     const dispatch = useDispatch();
@@ -47,19 +49,39 @@ export default function CardVaper(props) {
             dispatch(shopActions.deleteShops(data1))
         }
     }
-
+    const deleteUser = ()=>{
+        if(type === "liquids"){
+            dispatch(eliquidsActions.deleteEliquids(id))
+        }
+        else if(type === "vapers"){
+            dispatch(vapersActions.deleteVapers(id))
+        }
+    }
+    const updateUser = ()=>{
+        console.log(id)
+    }
     return (
-        <div className="product-card">
-            <img src={img} className="card-img-top" />
-            <div className="card-body d-flex justify-content-evenly flex-column align-items-center bg-black gap-1">
-                <h5 className="card-title">{name}</h5>
-                <p className="card-text mb-0 text-white mi">{description}.</p>
-                <div className="price-container d-flex">
-                    <p>${price}</p>
-                    <input className="input-cart" onChange={numb} type="number" min="0" max={cont} placeholder={0} name="quantity" id="quantity" />
+        _id.role == "user" ? (
+            <><div className="product-card">
+                <img src={img} className="card-img-top" />
+                <div className="card-body d-flex justify-content-evenly flex-column align-items-center bg-black gap-1">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text mb-0 text-white mi">{description}.</p>
+                    <div className="price-container d-flex">
+                        <p>${price}</p>
+                        <input className="input-cart" onChange={numb} type="number" min="0" max={cont} placeholder={0} name="quantity" id="quantity" />
+                    </div>
+                    {bool ? (<button onClick={send} value={id} className="btn btn-cart">Add to cart</button>) : (<><button onClick={send} value={id} className="btn btn-cart">Add to cart</button><button onClick={send} value={id} name={"delete"} className="btn btn-cart bg-danger">Delete from cart</button> </>)}
                 </div>
-                {bool ? (<button onClick={send} value={id} className="btn btn-cart">Add to cart</button>) : (<><button onClick={send} value={id} className="btn btn-cart">Add to cart</button><button onClick={send} value={id} name={"delete"} className="btn btn-cart bg-danger">Delete from cart</button> </>)}
-            </div>
-        </div>
+            </div></>) : (<><div className="product-card">
+                <img src={img} className="card-img-top" />
+                <div className="card-body d-flex justify-content-evenly flex-column align-items-center bg-black gap-1">
+                    <h5 className="card-title">{name}</h5>
+                    <div className="price-container d-flex">
+                    <button className='bottom-cardsOne' onClick={deleteUser}>Delete</button>
+                        <button className='bottom-cards' onClick={updateUser}>Edition</button>
+                    </div>
+                </div>
+            </div></>)
     )
 }
