@@ -10,7 +10,7 @@ export default function Home() {
                 </p>
                 <video className='videoHome' src="img/video/headerBackground.mp4" autoPlay muted loop></video>
             </div>
-            <main className='pb-4'>
+            <main className='home-main-container pb-4'>
                 <h2 className="text-white categories-text fs-1">Visit the Smoky experience</h2>
                 <div className='section2'>
                     <div className="img-category-1">Equipments</div>
@@ -33,7 +33,6 @@ export default function Home() {
                             devices, and most popular brands, as we focus on what our customers want, and what we know how
                             to do
                             best, listen to them and create the best products in the market.
-
                         </p>
                     </div>
                     <div className="img-container">

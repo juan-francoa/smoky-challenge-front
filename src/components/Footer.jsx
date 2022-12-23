@@ -3,17 +3,18 @@ import React from 'react'
 export default function Footer() {
     return (
 
-        
-        <footer className="footer-container ">
+
+        <footer className="footer-container">
             <div className="footer-warning">
                 <p className="">
                     These products are intended only for people of legal age. Use not allowed in minors and pregnant women.
                 </p>
             </div>
-            
-            <div className="footer">
+
+            <div className="footer pt-1">
                 <div className="logo-footer-container">
-                    <h3 className="map-text text-white">Follow us:</h3>
+                    <img className="logo-footer" src="img/smoky-logo-png.png" alt="logo Smoky" />
+                    <h4 className="map-text text-white">Follow us:</h4>
                     <div className="socialmedia-container ">
                         <a href="https://web.whatsapp.com/"><img className="redes-img" src="img/whatsapp.png"
                             alt="whatsapp logo" /></a>
@@ -22,7 +23,6 @@ export default function Footer() {
                         <a href="https://www.facebook.com/"><img className="redes-img" src="img/facebook.png"
                             alt="facebook logo" /></a>
                     </div>
-                    <img className="logo-footer" src="img/smoky-logo-png.png" alt="logo Smoky" />
                 </div>
 
                 <div className="map-text ">
@@ -54,8 +54,9 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="footer-container2 text-white">
-                <h6>Smoky Vape Shop® 2022 | By Hugo, Rochi, Pili, Juan, Caro, Andy y Meli ♥</h6>
+            <div className="footer-warning">
+                <h6>Smoky Vape Shop® 2022 |
+                    Developed by hugosmahlij, RocioDuarteBazan, juan-francoa, pilisalto, Raulmoyano2970, CarolinaPerez1992, y MelissaUribeRojas21 - find us on Github</h6>
             </div>
 
         </footer>
