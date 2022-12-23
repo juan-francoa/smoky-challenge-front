@@ -17,7 +17,6 @@
     overflow: hidden;
     border-radius: 20px;
     box-shadow: rgba(1, 1, 1, 0.25) 0px 13px 27px -5px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
-
 }
 
 .card-img-top {
@@ -35,11 +34,12 @@
     border-radius: 0 0 1em 1em;
 }
 
-.filters-container {
-    background-color: #000000d7;
-    width: 20%;
-    height: 100vh;
+.filter-container {
+    background-color: #0000009e;
+    width: 100%;
+    height: 20vh;
     margin-right: 1em;
+
 }
 
 .product-card img,
@@ -81,13 +81,40 @@ div {
     inset: 5px;
     border-radius: 15px;
 }
-.filter-container{
+
+.filter-container {
     color: white
 }
-.icon{
+
+.icon {
     width: 3rem;
     height: 3rem;
 }
-.card-title{
+
+.card-title {
     color: white;
+    text-shadow: 0 0 20px #58CDFF, 0 0 25px #58CDFF, 0 0 30px #58CDFF, 0 0 35px #58CDFF;
+    text-align: center;
+    font-weight: bold;
 }
+
+.price-container p {
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+}
+
+.price-container{
+    display: flex;
+    gap: 10rem;
+}
+
+.input-cart{
+    border-radius: .5rem;
+}
+
+.input-cart:hover {
+    box-shadow: 0 0 15px 3px #ffffff, 0 0 8px 1px #ff00ff;
+    transition: all 0.5s;
+}
+

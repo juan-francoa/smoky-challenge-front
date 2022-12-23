@@ -1,7 +1,6 @@
-CSS
 * {
     max-width: 100%;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .body-container-signup {
@@ -43,6 +42,7 @@ CSS
     flex-wrap: wrap;
     color: aquamarine;
     padding: 0 2em 0 2em;
+    z-index: 2;
 }
 
 .navbar-nav p {

@@ -66,19 +66,16 @@ export default function MyProfile() {
                 </div>
                 <div class="container-info">
                     <div class="name-container">
-                        <img class="edit-img" src="https://cdn-icons-png.flaticon.com/512/1160/1160515.png" />
                         <h1>{myUser.name}</h1>
                     </div>
-                    <div class="name-container d-flex align-items-center gap-3">
-                        <img class="edit-img" src="https://cdn-icons-png.flaticon.com/512/1160/1160515.png" />
-                        <h1>Age:{myUser.age}</h1>
+                    <div class="name-container d-flex align-items-center fs-5">
+                        <p>Age:{myUser.age}</p>
                     </div>
-                    <div class="name-container">
-                        <img class="edit-img" src="https://cdn-icons-png.flaticon.com/512/1160/1160515.png" />
+                    <div class="name-container fs-5">
                         <p>Email: {myUser.email}</p>
                     </div>
                     <div class="name-container">
-                        <button className='bottom-cards' onClick={updateUser}>Update Profile</button>
+                        <button className='btn' onClick={updateUser}>Update Profile</button>
                     </div>
 
                 </div>

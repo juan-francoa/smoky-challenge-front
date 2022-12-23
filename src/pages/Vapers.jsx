@@ -37,19 +37,16 @@ export default function Vapers() {
         console.log(check)
     }
     return (
-        <div className="bg-black body-container-products d-flex flex-column flex-wrap gap-3 justify-content-center pb-2">
+        <div className="bg-black body-container-products d-flex flex-column flex-wrap gap-3 justify-content-center align-items-center pb-2">
             <div className='filter-container d-flex flex-column flex-wrap gap-4 justify-content-center align-items-center'>
                 <div className='box'>
                     <div class="search-box">
                         <input type="text" placeholder='Search' className='search' onChange={search} />
-                        <label class="icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/8915/8915520.png" alt="" />
-                        </label>
                     </div>
                 </div>
                 <div>
                 <label className='label-check gap-4 d-flex'>
-                        {category.map(e => <><input class="checkbox" type="checkbox" onClick={e => categ(e.target.value)} value={e} />
+                        {category.map(e => <><input className="checkbox" type="checkbox" onClick={e => categ(e.target.value)} value={e} />
                         <div class="checkmark">{e}</div></>)}
                 </label>
                 </div>

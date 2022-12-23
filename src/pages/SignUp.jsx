@@ -62,8 +62,8 @@ export default function SignUp() {
                 <div className="card">
                     <div className="card2">
                         <div className="card3">
-                            <h3 className="title text-white mb-4">Sign Up</h3>
-                            <form className="d-flex justify-content-center flex-column gap-2">
+                            <h3 className="title-sign text-white mb-4">Sign Up</h3>
+                            <form className="d-flex justify-content-center flex-column gap-3">
                                 <div className="field">
                                     <img className="input-icon" src="img/name.png" />
                                     <InputGral autocomplete="off" id="logpass" type='text' placeholder='Name' refId={name} inputClass="input-field" />

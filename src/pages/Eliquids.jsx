@@ -38,14 +38,11 @@ export default function Eliquids() {
   }
   console.log(eliquids)
   return (
-    <div className="bg-black body-container-products d-flex flex-column flex-wrap gap-3 justify-content-center">
+    <div className="bg-black body-container-products d-flex flex-column flex-wrap gap-3 justify-content-center align-items-center">
       <div className='filter-container d-flex flex-column flex-wrap gap-4 justify-content-center align-items-center'>
         <div className='box'>
           <div class="search-box">
             <input type="text" className='search' placeholder='Search' onChange={search} />
-            <label class="icon">
-              <img src="https://cdn-icons-png.flaticon.com/512/8915/8915520.png" alt="" />
-            </label>
           </div>
         </div>
         <div>

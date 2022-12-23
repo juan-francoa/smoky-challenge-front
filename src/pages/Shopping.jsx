@@ -69,13 +69,13 @@ export default function Shopping() {
     }
   }, [bool, shop])
 
-  const mostra = () =>{
+  const mostra = () => {
     setBol(true)
   }
 
   return (
-    <div className='containershop bg-shop'>
-      <section className="orden__container ">
+    <div className='containershop bg-shop d-flex flex-column'>
+      <section className="orden__container card-shop">
         <h2 className='title text-white'>Shopping</h2>
         <div className='orden__completa '>
           {product?.length > 0 ? (product.map(e => <CardShopping img={e.photo} name={e.name} price={e.price} count={e.count} cardId={e._id} />)) : ("NOT FOUND")}
@@ -87,12 +87,41 @@ export default function Shopping() {
           <div className="orden__monto">
             <p>$ {total}</p>
           </div>
-          <button onClick={mostra} className="btn-link btn text-decoration-none">BUY</button>
+          <button onClick={mostra} className="btn text-decoration-none">BUY</button>
         </div>
         <div>
-          {bol ?(merca):("")}
+          {bol ? (merca) : ("")}
         </div>
       </section>
+
+      <div class="slider">
+        <div class="slider-track">
+          <div class="slide">
+            <img src="img/carousel/fume.png" alt="logo fume" />
+          </div>
+          <div class="slide">
+            <img src="img/carousel/geekvape.png" alt="logo geekvape" />
+          </div>
+          <div class="slide">
+            <img src="img/carousel/ignite.png" alt="logo ignite" />
+          </div>
+          <div class="slide">
+            <img src="img/carousel/joytech.png" alt="joytech logo" />
+          </div>
+          <div class="slide">
+            <img src="img/carousel/nasty.png" alt="nasty logo" />
+          </div>
+          <div class="slide">
+            <img src="img/carousel/smok.png" alt="smok logo" />
+          </div>
+          <div class="slide">
+            <img src="img/carousel/vaporesso.png" alt="vaporesso logo" />
+          </div>
+          <div class="slide">
+            <img src="img/carousel/zomo.png" alt="zomo logo" />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
