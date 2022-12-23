@@ -10,8 +10,8 @@
 }
 
 .profile-card {
+    width: 55rem;
     height: 27rem;
-    width: 48rem;
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +21,13 @@
     border-radius: 30px;
     gap: 3rem;
     padding: 4rem;
+    transition: all .2s;
+}
 
+.profile-card:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px 1px #ffffff;
 }
 
 .name-container {
@@ -36,10 +42,10 @@
 }
 
 .profile-im {
-    border-radius: 50%;
     width: 250px;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
+    border-radius: 2rem 0 2rem 0;
 }
 
 .edit-img {
@@ -67,4 +73,13 @@
     color: #ffffff;
     box-shadow: 0 8px 24px 0 #10277033;
     transition: all 0.3s;
+}
+
+.name-container img{
+    width: 2rem;
+}
+
+.container-info div{
+    display: flex;
+    gap: 8rem
 }

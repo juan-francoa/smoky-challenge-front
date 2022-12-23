@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import userActions from '../redux/actions/userAction';
 import Swal from 'sweetalert2';
 import "../profile.css"
+import { Fade } from "react-awesome-reveal";
 
 export default function MyProfile() {
     const dispatch = useDispatch()
@@ -61,24 +62,29 @@ export default function MyProfile() {
     return (
         <main className='containerprofile'>
             <div class="profile-card text-white ">
-                <div class="profile-img">
-                    <img class="profile-im" src={myUser.photo} alt="" />
-                </div>
-                <div class="container-info">
-                    <div class="name-container">
-                        <h1>{myUser.name}</h1>
+                <Fade>
+                    <div class="profile-img">
+                        <img class="profile-im" src={myUser.photo} alt="" />
                     </div>
-                    <div class="name-container d-flex align-items-center fs-5">
-                        <p>Age:{myUser.age}</p>
-                    </div>
-                    <div class="name-container fs-5">
-                        <p>Email: {myUser.email}</p>
-                    </div>
-                    <div class="name-container">
-                        <button className='btn' onClick={updateUser}>Update Profile</button>
-                    </div>
+                    <div class="container-info d-flex flex-column gap-2">
+                        <div class="name-container d-flex gap-3">
+                            <img src="img/name.png" alt="" />
+                            <h1>{myUser.name}</h1>
+                        </div>
+                        <div class="name-container d-flex align-items-center fs-5 gap-3">
+                            <img src="img/age.png" alt="" />
+                            <p>Age:{myUser.age}</p>
+                        </div>
+                        <div class="name-container fs-5 d-flex gap-3">
+                            <img src="img/arroba.png" alt="" />
+                            <p>Email: {myUser.email}</p>
+                        </div>
+                        <div class="name-container">
+                            <button className='btn' onClick={updateUser}>Update Profile</button>
+                        </div>
 
-                </div>
+                    </div>
+                </Fade>
             </div>
         </main>
     )

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import CardVaper from '../components/CardVaper';
 import eliquidsActions from '../redux/actions/eliquidsAction';
+import { Fade } from "react-awesome-reveal";
 
 export default function Eliquids() {
   const dispatch = useDispatch();
@@ -48,14 +49,16 @@ export default function Eliquids() {
         <div>
           <label className='label-check gap-4 d-flex'>
             {category.map(e => <><input class="checkbox" type="checkbox" onClick={e => categ(e.target.value)} value={e} />
-            <div class="checkmark">{e}</div></>)}
+              <div class="checkmark">{e}</div></>)}
           </label>
         </div>
       </div>
-      <h1 className='title-products'>E-liquids</h1>
-      <div className='d-flex flex-wrap gap-5 justify-content-center pt-4 pb-4'>
-        {eliquids.length === 0 ? ("NOT FOUND") : (eliquids.map(e => <CardVaper name={e.name} description={e.description} price={e.price} img={e.photo} cont={e.amount} id={e._id} type={"liquids"} />))}
-      </div>
+      <Fade>
+        <h1 className='title-products'>E-liquids</h1>
+        <div className='d-flex flex-wrap gap-5 justify-content-center pt-4 pb-4'>
+          {eliquids.length === 0 ? ("NOT FOUND") : (eliquids.map(e => <CardVaper name={e.name} description={e.description} price={e.price} img={e.photo} cont={e.amount} id={e._id} type={"liquids"} />))}
+        </div>
+      </Fade>
     </div>
   )
 }

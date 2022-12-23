@@ -95,9 +95,9 @@
 .producto {
     align-items: center;
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .producto img {
@@ -283,6 +283,6 @@ input.checkbox {
 
     100% {
         -webkit-transform: translateX(calc(-200px * 7));
-        transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-100px * 7));
     }
 }
