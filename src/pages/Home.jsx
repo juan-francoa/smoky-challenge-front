@@ -1,4 +1,5 @@
 import React from 'react'
+import { Slide } from "react-awesome-reveal";
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
                 <video className='videoHome' src="img/video/headerBackground.mp4" autoPlay muted loop></video>
             </div>
             <main className='home-main-container pb-4'>
+                <Slide cascade={1}>
                 <h2 className="text-white categories-text fs-1">Visit the Smoky experience</h2>
                 <div className='section2'>
                     <div className="img-category-1">Equipments</div>
@@ -39,6 +41,7 @@ export default function Home() {
                         <img className="main-img" src="img/main-home-img.jpg" alt="man vaping" />
                     </div>
                 </div>
+                </Slide>
             </main>
         </div>
     )

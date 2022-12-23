@@ -87,7 +87,7 @@ export default function Shopping() {
           <div className="orden__monto">
             <p>$ {total}</p>
           </div>
-          <button  onClick={mostra} className="btn-link btn">BUY</button>
+          <button onClick={mostra} className="btn-link btn text-decoration-none">BUY</button>
         </div>
         <div>
           {bol ?(merca):("")}

@@ -201,7 +201,7 @@ export default function CardVaper(props) {
             </div>
         </div></>) : (
             <><div className="product-card">
-                <img src={img} className="card-img-top" />
+                <img src={img} className="card-img-top"/>
                 <div className="card-body d-flex justify-content-evenly flex-column align-items-center bg-black gap-1">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text mb-0 text-white mi">{description}.</p>

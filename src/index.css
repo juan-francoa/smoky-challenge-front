@@ -122,6 +122,7 @@ CSS
     align-items: center;
     color: white;
     font-size: 2em;
+    border-radius: 10px;
 }
 
 .img-category-1:hover,
@@ -143,6 +144,7 @@ CSS
     align-items: center;
     color: white;
     font-size: 2em;
+    border-radius: 10px;
 }
 
 .img-category-3 {
@@ -156,6 +158,7 @@ CSS
     align-items: center;
     color: white;
     font-size: 2em;
+    border-radius: 10px;
 }
 
 .img-category-4 {
@@ -169,6 +172,7 @@ CSS
     align-items: center;
     color: white;
     font-size: 2em;
+    border-radius: 10px;
 }
 
 .navbar-toggler-icon {

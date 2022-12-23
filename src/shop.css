@@ -137,3 +137,66 @@ justify-content: center;
 .orden__monto{
     color:black
 }
+
+/*Search and checkboxs*/
+
+.search {
+    background-color: #212121;
+    max-width: 190px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.search:focus {
+    color: white;
+    background-color: #212121;
+    outline-color: #58CDFF;
+    box-shadow:  0 0 5px #24b6f4, 0 0 10px #58CDFF, 0 0 15px #58CDFF, 0 0 20px #58CDFF, 0 0 25px #58CDFF, 0 0 30px #58CDFF, 0 0 35px #58CDFF;
+    transition: .1s;
+    transition-property: box-shadow;
+}
+
+.label-check .ckeckbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+input.checkbox {
+    background: #606062 !important;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 7px;
+}
+
+.label-check .ckeckbox:checked ~ .checkmark {
+    background-image: linear-gradient(#255CD2,#1D52C1)
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.ckeckbox:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    left: 0.45em;
+    top: 0.20em;
+    width: 0.24em;
+    height: 0.6em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
