@@ -7,6 +7,7 @@ import eliquidsActions from '../redux/actions/eliquidsAction'
 import vapersActions from '../redux/actions/vapersAction';
 import shopActions from '../redux/actions/shopAction';
 import userAction from '../redux/actions/userAction';
+import MercadoPago from '../components/MercadoPago';
 import "../shop.css"
 
 export default function Shopping() {
@@ -15,37 +16,62 @@ export default function Shopping() {
   let { shop } = useSelector((store) => store.shopReducer);
   let { eliquids } = useSelector((store) => store.eliquidsReducer);
   let { vapers } = useSelector((store) => store.vapersReducer);
-  let { id } = useSelector((store) => store.userReducer);
-  let [product, setProduct] = useState(shop)
+  let { id, token } = useSelector((store) => store.userReducer);
+  let [bool, setBool] = useState(false)
+  let [product, setProduct] = useState([])
+  let [merca, setMerca] = useState("")
+  let [bol, setBol] = useState(false)
+  const data = { name: "", category: "" }
+
   useEffect(() => {
-    const data = { name: "", category: "" }
+    if (!shop?.products && !bool) {
+      dispatch(shopActions.getShops(id))
+    }
+    else if (shop?.products && !bool) {
+      setBool(true)
+    }
+  }, [dispatch, id, shop])
+
+  useEffect(() => {
+    dispatch(eliquidsActions.getEliquids(data))
+  }, [bool, shop])
+
+  useEffect(() => {
+    dispatch(vapersActions.getVapers(data))
+  }, [bool, shop])
+
+  useEffect(() => {
+
     let tot = 0
-    dispatch(shopActions.getShops(id))
+
     if (shop?.products) {
       let array = shop.products.map(e => {
-        dispatch(eliquidsActions.getEliquids(data))
-        let bool = eliquids.filter(a => a._id === Object.keys(e)[0])
-        if (bool.length > 0) {
-          bool = { ...bool[0] }
-          bool.count = e[Object.keys(e)[0]]
-          tot += e[Object.keys(e)[0]] * bool.price
-          return bool
+
+        let bol = eliquids.filter(a => a._id === Object.keys(e)[0])
+        if (bol.length > 0) {
+          bol = { ...bol[0] }
+          bol.count = e[Object.keys(e)[0]]
+          tot += e[Object.keys(e)[0]] * bol.price
+          return bol
         }
         else {
-          const data = { name: "", category: "" }
-          let bool = ""
-          dispatch(vapersActions.getVapers(data))
-          bool = { ...vapers.filter(a => a._id === Object.keys(e)[0])[0] }
-          bool.count = e[Object.keys(e)[0]]
-          tot += e[Object.keys(e)[0]] * bool.price
+          let bol = ""
+          bol = { ...vapers.filter(a => a._id === Object.keys(e)[0])[0] }
+          bol.count = e[Object.keys(e)[0]]
+          tot += e[Object.keys(e)[0]] * bol.price
           setTotal(tot)
-          return bool
+          return bol
         }
       })
       setProduct(array)
       setTotal(tot)
+      setMerca(<MercadoPago token={token} array={product} />)
     }
-  }, [dispatch, id, shop])
+  }, [bool, shop])
+
+  const mostra = () =>{
+    setBol(true)
+  }
 
   return (
     <div className='containershop bg-shop'>
@@ -61,7 +87,10 @@ export default function Shopping() {
           <div className="orden__monto">
             <p>$ {total}</p>
           </div>
-          <button className="btn-link btn">BUY</button>
+          <button  onClick={mostra} className="btn-link btn">BUY</button>
+        </div>
+        <div>
+          {bol ?(merca):("")}
         </div>
       </section>
     </div>

@@ -58,7 +58,7 @@ export default function Eliquids() {
       </div>
       <h1 className='title-products'>E-liquids</h1>
       <div className='d-flex flex-wrap gap-5 justify-content-center pt-4 pb-4'>
-        {eliquids.length === 0 ? ("NOT FOUND") : (eliquids.map(e => <CardVaper name={e.name} description={e.description} price={e.price} img={e.photo} cont={e.amount} id={e._id} />))}
+        {eliquids.length === 0 ? ("NOT FOUND") : (eliquids.map(e => <CardVaper name={e.name} description={e.description} price={e.price} img={e.photo} cont={e.amount} id={e._id} type={"liquids"} />))}
       </div>
     </div>
   )
